@@ -13,15 +13,6 @@ export default function Desktop({ property, handleOpenInfoClick }) {
               <ImgWithFallback src={property.images[0]} alt={property.type} />
             </div>
           );
-        } else if (col.key === 'reference') {
-          content = (
-            <button
-              onClick={handleOpenInfoClick}
-              className='flex-1 text-center p-2 rounded-lg hover:bg-gray-300'
-            >
-              {value}
-            </button>
-          );
         } else if (col.key === 'price') {
           content = value.toLocaleString('es-ES') + '€';
         } else if (col.key === 'surface') {
@@ -32,6 +23,7 @@ export default function Desktop({ property, handleOpenInfoClick }) {
 
         return (
           <div
+            onClick={handleOpenInfoClick}
             key={col.key}
             className={`${col.flex} ${col.responsive} text-center`}
           >
