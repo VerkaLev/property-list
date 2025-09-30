@@ -1,7 +1,7 @@
 import { columns } from '../../../../../consts';
 import ImgWithFallback from '../../../../ui/ImgWithFallback';
 
-export default function PropertyRowDesktop({ property, handleOpenInfoClick }) {
+export default function Desktop({ property, handleOpenInfoClick }) {
   return (
     <div className='hidden md:flex justify-between items-center h-20 border-t-2 border-black '>
       {columns.map((col) => {
