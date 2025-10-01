@@ -18,7 +18,7 @@ export default function PropertyInfo() {
 
   if (!currentProperty) return null;
   return (
-    <div className='fixed sm:absolute top-0 left-0 h-screen w-full sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 flex flex-col sm:w-[90%] sm:h-[80%] xl:w-[62rem] xl:h-[50rem] p-6 sm:rounded-xl bg-white z-40 overflow-y-auto shadow'>
+    <div className='fixed sm:absolute top-0 left-0 h-[100dvh] md:h-screen w-full sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 flex flex-col sm:w-[90%] sm:h-[80%] xl:w-[62rem] xl:h-[50rem] p-6 sm:rounded-xl bg-white z-40 overflow-y-auto shadow'>
       <Nav ref={ref} handleCloseClick={handleCloseClick} />
 
       <div className='flex flex-col h-full'>
