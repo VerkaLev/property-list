@@ -4,7 +4,7 @@ import propertiesData from '../data/properties.json';
 export const useProperties = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchInfo, setSearchInfo] = useState('');
-  const [pageCount, setPageCount] = useState(6);
+  const [pageCount, setPageCount] = useState(1);
   const [filters, setFilters] = useState({
     cuidad: '',
     type: '',
@@ -16,7 +16,7 @@ export const useProperties = () => {
     toDate: '',
   });
 
-  const rowHeight = 80;
+  const rowHeight = window.innerWidth < 768 ? 130 : 80;
 
   const filteredData = propertiesData.filter((item) => {
     const search = searchInfo.toLowerCase();
@@ -49,7 +49,8 @@ export const useProperties = () => {
     const updatePageSize = () => {
       const availableHeight = window.innerHeight - 200;
       const rows = Math.floor(availableHeight / rowHeight);
-      setPageCount(rows > 0 ? Math.min(rows, 20) : 1);
+      // setPageCount(rows > 0 ? Math.min(rows, 20) : 1);
+      setPageCount(rows > 0 ? rows : 1);
     };
 
     updatePageSize();

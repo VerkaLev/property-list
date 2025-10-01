@@ -4,7 +4,7 @@ export default function Mobile({ property, handleOpenInfoClick }) {
   return (
     <div
       onClick={handleOpenInfoClick}
-      className='md:hidden flex justify-between items-center border-gray-300 border-2 p-2 rounded-lg shadow'
+      className='md:hidden flex justify-between items-center border-gray-300 border-2 p-2 rounded-lg shadow max-h-[10rem]'
     >
       <div className='flex flex-col items-center mr-4'>
         <div className='h-16 w-16 mb-2'>
