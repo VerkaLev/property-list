@@ -9,7 +9,7 @@ function App() {
     <RefContextProvider>
       <Router>
         <BgCover />
-        <div className='h-screen flex xl:bg-gray-200'>
+        <div className='h-[100dvh] md:h-screen flex xl:bg-gray-200'>
           <Sidebar />
           <main className='flex-1 p-2 xl:px-14 xl:py-8 overflow-y-auto overflow-x-hidden'>
             <Routes>

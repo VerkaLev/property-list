@@ -49,7 +49,6 @@ export const useProperties = () => {
     const updatePageSize = () => {
       const availableHeight = window.innerHeight - 200;
       const rows = Math.floor(availableHeight / rowHeight);
-      // setPageCount(rows > 0 ? Math.min(rows, 20) : 1);
       setPageCount(rows > 0 ? rows : 1);
     };
 
