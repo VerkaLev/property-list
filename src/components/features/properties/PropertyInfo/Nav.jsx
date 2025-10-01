@@ -42,15 +42,12 @@ export default function PropertyNav({ ref, handleCloseClick }) {
         <button
           disabled={currentIndex === propertiesData.length - 1}
           onClick={handleNextClick}
-          className='w-8 h-8 text-gray-400'
+          className='w-8 h-8 text-gray-400 disabled:opacity-20'
         >
           <ChevronRightIcon />
         </button>
       </div>
-      <button
-        onClick={handleCloseClick}
-        className='w-8 h-8 text-gray-400 disabled:opacity-20'
-      >
+      <button onClick={handleCloseClick} className='w-8 h-8 text-gray-400'>
         <XMarkIcon />
       </button>
     </div>
